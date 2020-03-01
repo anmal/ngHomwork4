@@ -1,0 +1,24 @@
+<div class="element-left" *ngIf="resortList$ | async as list">
+  <div class="element-bg-img"><img [src]="this.currResortImg$ | async | imgUrl" alt="" class="img-responsive"> </div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <ul>
+        <li *ngFor="let resortType of resortTypes; let last=last" [className]="last ? 'anc-bor' : '' ">
+          <a href="#" (click)="filter(resortType)">{{resortType}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class="village">
+      <h3>Righteous indignation & like</h3>
+      <span class="line"> </span>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+
+          <app-resort-info-brief *ngFor="let item of list" [object]="item" (click)="selectResort(item)">
+          </app-resort-info-brief>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

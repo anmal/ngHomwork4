@@ -1,0 +1,18 @@
+
+<h1>Hot Weather Widget</h1>
+
+<div class="element">
+  <app-resorts-list></app-resorts-list>
+  <app-resort-info-detail></app-resort-info-detail>
+</div>
+
+
+<div *ngIf="this.loading$| async" class="copy-right">
+  <p>Loading...</p>
+</div>
+
+
+<app-footer></app-footer>
+
+
+

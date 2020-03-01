@@ -1,0 +1,10 @@
+
+<ng-container *ngIf="object != null">
+  <div class="temperatur">
+    <h5>{{object.title}}</h5>
+    <span class="w-line"> </span>
+    <span [class]="object.icon"> </span>
+    <h2><app-temperature>{{object.temperature}}</app-temperature></h2>
+    <h6>Water <app-temperature>{{object.water}}</app-temperature></h6>
+  </div>
+</ng-container>

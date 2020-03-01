@@ -1,0 +1,20 @@
+<ng-container *ngIf="object != null">
+  <div class="teddy-bear">
+    <div class="teddy-text">
+      <h4>{{object.title}}</h4>
+      <span class="w-line"> </span>
+      <img [src]="object.img | imgUrl" alt=""  class="img-responsive">
+    </div>
+    <div class="teddy-follow">
+      <ul>
+        <li class="folw-h"><h3>{{object.followers}}</h3>
+          <p>Followers</p>
+        </li>
+        <li><h3>{{object.following}}</h3>
+          <p>Following</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ng-container>
+

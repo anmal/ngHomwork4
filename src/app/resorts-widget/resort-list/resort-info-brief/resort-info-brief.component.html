@@ -1,0 +1,19 @@
+<ng-container *ngIf="object != null">
+  <div class="activity-row">
+    <div class="activity-desc">
+      <h5>Resort Address</h5>
+      <p>{{object.address}}</p>
+      <p>{{object?.weather?.title}}</p>
+      <h6>{{object?.phone | telephone}}</h6>
+    </div>
+    <div class="activity-img">
+      <ul>
+        <li><img [src]='object.social_info.img | imgUrl: "small"'  alt=""/></li>
+        <li><img [src]='object.img | imgUrl: "small"'  alt=""/></li>
+      </ul>
+    </div>
+    <div class="clear"> </div>
+  </div>
+</ng-container>
+
+
